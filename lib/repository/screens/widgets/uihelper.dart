@@ -27,4 +27,5 @@ class Uihelper {
       ),
     );
   }
+  static customButton({required String buttonName, required VoidCallback callBack,Color? buttonColor}){}
 }
