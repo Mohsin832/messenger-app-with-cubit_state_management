@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ThemeCubit, Themestates>(
-      builder: (context, State) {
+      builder: (context, state) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           home: Onboardingscreen(),
