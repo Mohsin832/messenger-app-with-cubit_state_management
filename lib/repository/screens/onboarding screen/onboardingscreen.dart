@@ -19,6 +19,18 @@ class Onboardingscreen extends StatelessWidget {
               fontfamily: "bold",
               fontweight: FontWeight.bold,
             ),
+            Uihelper.customText(
+              text: "your family and friends",
+              fontsize: 24,
+              fontfamily: "bold",
+              fontweight: FontWeight.bold,
+            ),
+            Uihelper.customText(
+              text: "over countries",
+              fontsize: 24,
+              fontfamily: "bold",
+              fontweight: FontWeight.bold,
+            ),
           ],
         ),
       ),

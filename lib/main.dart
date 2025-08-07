@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
           home: Onboardingscreen(),
           title: "Chat app",
           theme: State is LightThemeStates
-              ? Apptheme.lightTheme
-              : Apptheme.darkTheme,
+              ? Apptheme.darkTheme
+              : Apptheme.lightTheme,
         );
       },
     );
