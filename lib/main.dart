@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           home: Onboardingscreen(),
           title: "Chat app",
-          theme: State is LightThemeStates
-              ? Apptheme.darkTheme
-              : Apptheme.lightTheme,
+          theme: state is LightThemeStates
+              ? Apptheme.lightTheme
+              : Apptheme.darkTheme,
         );
       },
     );
