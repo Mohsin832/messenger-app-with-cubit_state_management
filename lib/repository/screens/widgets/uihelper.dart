@@ -41,7 +41,7 @@ class Uihelper {
       width: 237,
       child: ElevatedButton(
         onPressed: () {
-          callBack;
+          callBack();
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.buttonLightColor,
