@@ -66,4 +66,41 @@ class Uihelper {
       ),
     );
   }
+
+  static customTextField({
+    required TextEditingController controller,
+    required String hintText,
+    required textInputType,
+    required BuildContext context,
+  }) {
+    return Container(
+      height: 36,
+      width: 327,
+      decoration: BoxDecoration(
+        color: Theme.of(context).brightness == Brightness.dark
+            ? AppColors.containerDarkColor
+            : AppColors.containerLightColor,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10),
+        child: TextField(
+          textAlign: TextAlign.start,
+
+          controller: controller,
+          keyboardType: textInputType,
+          textAlignVertical: TextAlignVertical.center,
+          decoration: InputDecoration(
+            hintText: hintText,
+            border: InputBorder.none,
+            hintStyle: TextStyle(
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? AppColors.hintTextDarkColor
+                  : AppColors.hintTextLightColor,
+              fontSize: 14,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }

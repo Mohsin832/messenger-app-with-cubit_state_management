@@ -1,3 +1,4 @@
+import 'package:chatapp/domain/constants/appcolors.dart';
 import 'package:chatapp/repository/screens/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +7,8 @@ class Loginscreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController phoneNumberController = TextEditingController();
+
     return Scaffold(
       body: Center(
         child: Column(
@@ -28,9 +31,26 @@ class Loginscreen extends StatelessWidget {
               fontsize: 14,
               context: context,
             ),
+
+            SizedBox(height: 20),
+            Uihelper.customTextField(
+              controller: phoneNumberController,
+              hintText: "Phone Number",
+              textInputType: TextInputType.number,
+              context: context,
+            ),
           ],
         ),
       ),
+      floatingActionButton: Uihelper.customButton(
+        buttonName: "Continue",
+        callBack: () {},
+        context: context,
+        buttonColor: Theme.of(context).brightness == Brightness.dark
+            ? AppColors.buttonDarkColor
+            : AppColors.buttonDarkColor,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

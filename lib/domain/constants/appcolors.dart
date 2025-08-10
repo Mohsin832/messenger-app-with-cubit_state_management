@@ -13,4 +13,10 @@ class AppColors {
   //text field color for light and dark color
   static const Color textfieldLightColor = Color(0xFFF7F7FC);
   static const Color textfieldDarkColor = Color(0xFF152033);
+  //text field color for light and dark mode
+  static const Color containerLightColor = Color(0xFFF7F7FC);
+  static const Color containerDarkColor = Color(0xFF152033);
+  //hint text color for light and dark mode
+  static const Color hintTextLightColor = Color(0xFFADB5BD);
+  static const Color hintTextDarkColor = Color(0xFFF7F7FC);
 }
