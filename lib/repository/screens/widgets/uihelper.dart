@@ -35,6 +35,7 @@ class Uihelper {
     required String buttonName,
     required VoidCallback callBack,
     Color? buttonColor,
+    required BuildContext context,
   }) {
     return SizedBox(
       height: 52,
@@ -44,11 +45,16 @@ class Uihelper {
           callBack();
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.buttonLightColor,
+          backgroundColor:
+              buttonColor ??
+              (Theme.of(context).brightness == Brightness.dark
+                  ? AppColors.buttonDarkColor
+                  : AppColors.buttonLightColor),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),
         ),
+
         child: Text(
           buttonName,
           style: TextStyle(

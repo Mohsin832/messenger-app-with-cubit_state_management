@@ -22,7 +22,11 @@ class Loginscreen extends StatelessWidget {
               text: "Please confirm your country code and enter ",
               fontsize: 14,
               context: context,
-              fontfamily: "",
+            ),
+            Uihelper.customText(
+              text: "your phone number",
+              fontsize: 14,
+              context: context,
             ),
           ],
         ),

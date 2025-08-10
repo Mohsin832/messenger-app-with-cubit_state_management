@@ -57,6 +57,7 @@ class Onboardingscreen extends StatelessWidget {
         ),
         floatingActionButton: Uihelper.customButton(
           buttonName: "Start Messaging",
+          context: context,
           callBack: () {
             Navigator.push(
               context,
