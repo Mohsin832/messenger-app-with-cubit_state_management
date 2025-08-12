@@ -20,7 +20,7 @@ class Uihelper {
       text,
       style: TextStyle(
         fontSize: fontsize,
-        
+
         fontFamily: fontfamily ?? "regular",
         fontWeight: fontweight ?? FontWeight.normal,
         color:
@@ -60,8 +60,10 @@ class Uihelper {
           buttonName,
           style: TextStyle(
             fontSize: 14,
+            fontFamily: "bold",
+
             color: Colors.white,
-            fontWeight: FontWeight.w300,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -76,7 +78,7 @@ class Uihelper {
   }) {
     return Container(
       height: 36,
-      width: 327,
+      width: 300,
       decoration: BoxDecoration(
         color: Theme.of(context).brightness == Brightness.dark
             ? AppColors.containerDarkColor

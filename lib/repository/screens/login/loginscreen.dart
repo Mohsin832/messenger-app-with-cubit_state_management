@@ -1,4 +1,5 @@
 import 'package:chatapp/domain/constants/appcolors.dart';
+import 'package:chatapp/repository/screens/OTP/otpscreen.dart';
 import 'package:chatapp/repository/screens/widgets/uihelper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +49,7 @@ class Loginscreen extends StatelessWidget {
             SizedBox(height: 20),
             Uihelper.customTextField(
               controller: phoneNumberController,
-              hintText: "   Phone Number",
+              hintText: " Phone Number",
               textInputType: TextInputType.phone,
               context: context,
             ),
@@ -57,7 +58,12 @@ class Loginscreen extends StatelessWidget {
       ),
       floatingActionButton: Uihelper.customButton(
         buttonName: "Continue",
-        callBack: () {},
+        callBack: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Otpscreen()),
+          );
+        },
         context: context,
         buttonColor: Theme.of(context).brightness == Brightness.dark
             ? AppColors.buttonDarkColor
