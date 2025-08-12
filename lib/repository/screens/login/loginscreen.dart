@@ -35,11 +35,14 @@ class Loginscreen extends StatelessWidget {
               fontweight: FontWeight.bold,
               fontfamily: "bold",
             ),
+            SizedBox(height: 20),
             Uihelper.customText(
               text: "Please confirm your country code and enter ",
               fontsize: 14,
               context: context,
             ),
+            SizedBox(height: 10),
+
             Uihelper.customText(
               text: "your phone number",
               fontsize: 14,
@@ -67,7 +70,7 @@ class Loginscreen extends StatelessWidget {
         context: context,
         buttonColor: Theme.of(context).brightness == Brightness.dark
             ? AppColors.buttonDarkColor
-            : AppColors.buttonDarkColor,
+            : AppColors.buttonLightColor,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );

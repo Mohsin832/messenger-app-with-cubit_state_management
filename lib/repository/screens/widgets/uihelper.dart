@@ -95,7 +95,18 @@ class Uihelper {
         decoration: InputDecoration(
           hintText: hintText,
           isDense: true,
-          border: InputBorder.none,
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
+
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? AppColors.borderTextFieldDarkModeColor
+                  : AppColors.borderTextFieldLightModeColor,
+              width: 1.9,
+            ),
+          ),
+
+          // border: InputBorder.none,
           hintStyle: TextStyle(
             color: Theme.of(context).brightness == Brightness.dark
                 ? AppColors.hintTextDarkColor

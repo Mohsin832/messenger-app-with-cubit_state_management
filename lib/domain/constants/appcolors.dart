@@ -19,4 +19,7 @@ class AppColors {
   //hint text color for light and dark mode
   static const Color hintTextLightColor = Color(0xFFADB5BD);
   static const Color hintTextDarkColor = Color(0xFFF7F7FC);
+  // text field border color for light and dark color
+  static const Color borderTextFieldLightModeColor = Color(0xFF080117);
+  static const Color borderTextFieldDarkModeColor = Color(0xFF4100ba);
 }
