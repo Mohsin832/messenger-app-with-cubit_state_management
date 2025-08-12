@@ -48,7 +48,7 @@ class Loginscreen extends StatelessWidget {
             SizedBox(height: 20),
             Uihelper.customTextField(
               controller: phoneNumberController,
-              hintText: "Phone Number",
+              hintText: "   Phone Number",
               textInputType: TextInputType.phone,
               context: context,
             ),

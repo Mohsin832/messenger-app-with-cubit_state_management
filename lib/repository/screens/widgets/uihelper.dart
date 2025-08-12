@@ -20,6 +20,7 @@ class Uihelper {
       text,
       style: TextStyle(
         fontSize: fontsize,
+        
         fontFamily: fontfamily ?? "regular",
         fontWeight: fontweight ?? FontWeight.normal,
         color:
@@ -58,7 +59,7 @@ class Uihelper {
         child: Text(
           buttonName,
           style: TextStyle(
-            fontSize: 16,
+            fontSize: 14,
             color: Colors.white,
             fontWeight: FontWeight.w300,
           ),
@@ -81,23 +82,23 @@ class Uihelper {
             ? AppColors.containerDarkColor
             : AppColors.containerLightColor,
       ),
-      child: Padding(
-        padding: const EdgeInsets.only(left: 10),
-        child: TextField(
-          textAlign: TextAlign.start,
 
-          controller: controller,
-          keyboardType: textInputType,
-          textAlignVertical: TextAlignVertical.center,
-          decoration: InputDecoration(
-            hintText: hintText,
-            border: InputBorder.none,
-            hintStyle: TextStyle(
-              color: Theme.of(context).brightness == Brightness.dark
-                  ? AppColors.hintTextDarkColor
-                  : AppColors.hintTextLightColor,
-              fontSize: 14,
-            ),
+      child: TextField(
+        // textAlign: TextAlign.start,
+        controller: controller,
+
+        keyboardType: textInputType,
+        textAlignVertical: TextAlignVertical.center,
+
+        decoration: InputDecoration(
+          hintText: hintText,
+          isDense: true,
+          border: InputBorder.none,
+          hintStyle: TextStyle(
+            color: Theme.of(context).brightness == Brightness.dark
+                ? AppColors.hintTextDarkColor
+                : AppColors.hintTextLightColor,
+            fontSize: 14,
           ),
         ),
       ),
