@@ -22,4 +22,7 @@ class AppColors {
   // text field border color for light and dark color
   static const Color borderTextFieldLightModeColor = Color(0xFF080117);
   static const Color borderTextFieldDarkModeColor = Color(0xFF4100ba);
+  // OTP color for light and dark mode
+  static const Color otpLightColor = Color(0xFFEDEDED);
+  static const Color otpDarkColor = Color(0xFF152033);
 }
