@@ -25,4 +25,7 @@ class AppColors {
   // OTP color for light and dark mode
   static const Color otpLightColor = Color(0xFFEDEDED);
   static const Color otpDarkColor = Color(0xFF152033);
+  // OTP text color for light and dark color
+  static const Color otpTextLightColor = Color(0xFF002DE3);
+  static const Color otpTextDarkColor = Color(0xFFF7F7FC);
 }

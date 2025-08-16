@@ -19,12 +19,14 @@ class Otpscreen extends StatelessWidget {
             : Colors.black,
         fontWeight: FontWeight.w600,
 
-        backgroundColor: Colors.white70,
-        decorationColor: Colors.white70,
+        // backgroundColor: Colors.white70,
+        // decorationColor: Colors.white70,
       ),
 
       decoration: BoxDecoration(
-        color: Colors.white60,
+        color: Theme.of(context).brightness == Brightness.dark
+            ? AppColors.otpDarkColor
+            : AppColors.otpLightColor,
         // border: Border.all(color: Color.fromRGBO(234, 239, 243, 1)),
         borderRadius: BorderRadius.circular(7),
       ),
@@ -61,6 +63,7 @@ class Otpscreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(height: 40),
             Uihelper.customText(
@@ -90,10 +93,28 @@ class Otpscreen extends StatelessWidget {
               defaultPinTheme: defaultPinTheme,
               focusedPinTheme: focusedPinTheme,
               submittedPinTheme: submittedPinTheme,
+              closeKeyboardWhenCompleted: true,
+              isCursorAnimationEnabled: true,
+              autofocus: true,
             ),
           ],
         ),
       ),
+      floatingActionButton: TextButton(
+        onPressed: () {},
+        child: Text(
+          "Resend Code",
+          style: TextStyle(
+            fontSize: 16,
+            fontFamily: "regular",
+
+            color: Theme.of(context).brightness == Brightness.dark
+                ? AppColors.otpTextDarkColor
+                : AppColors.otpTextLightColor,
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
