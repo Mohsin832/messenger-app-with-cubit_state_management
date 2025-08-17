@@ -1,4 +1,5 @@
 import 'package:chatapp/domain/constants/appcolors.dart';
+import 'package:chatapp/repository/screens/profile/profilescreen.dart';
 import 'package:chatapp/repository/screens/widgets/uihelper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,15 +20,12 @@ class Otpscreen extends StatelessWidget {
             : Colors.black,
         fontWeight: FontWeight.w600,
 
-        // backgroundColor: Colors.white70,
-        // decorationColor: Colors.white70,
       ),
 
       decoration: BoxDecoration(
         color: Theme.of(context).brightness == Brightness.dark
             ? AppColors.otpDarkColor
             : AppColors.otpLightColor,
-        // border: Border.all(color: Color.fromRGBO(234, 239, 243, 1)),
         borderRadius: BorderRadius.circular(7),
       ),
     );
@@ -90,12 +88,19 @@ class Otpscreen extends StatelessWidget {
             SizedBox(height: 20),
             Pinput(
               controller: otpController,
+
               defaultPinTheme: defaultPinTheme,
               focusedPinTheme: focusedPinTheme,
               submittedPinTheme: submittedPinTheme,
               closeKeyboardWhenCompleted: true,
               isCursorAnimationEnabled: true,
               autofocus: true,
+              onCompleted: (value) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Profilescreen()),
+                );
+              },
             ),
           ],
         ),
