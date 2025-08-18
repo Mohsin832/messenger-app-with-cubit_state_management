@@ -28,4 +28,7 @@ class AppColors {
   // OTP text color for light and dark color
   static const Color otpTextLightColor = Color(0xFF002DE3);
   static const Color otpTextDarkColor = Color(0xFFF7F7FC);
+  // circle avatar color for light and dark color
+  static const Color circleAvatarLightColor = Color(0xFFF7F7FC);
+  static const Color circleAvatarDarkColor = Color(0xFF152033);
 }
