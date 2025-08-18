@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:chatapp/domain/constants/appcolors.dart';
 import 'package:chatapp/repository/screens/widgets/uihelper.dart';
 import 'package:flutter/cupertino.dart';
