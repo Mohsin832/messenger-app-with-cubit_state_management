@@ -1,4 +1,5 @@
 import 'package:chatapp/domain/constants/appcolors.dart';
+import 'package:chatapp/repository/bottom%20navigation/bottomnavigationscreen.dart';
 import 'package:chatapp/repository/screens/widgets/uihelper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -44,6 +45,7 @@ class Profilescreen extends StatelessWidget {
                       Theme.of(context).brightness == Brightness.dark
                       ? AppColors.circleAvatarDarkColor
                       : AppColors.circleAvatarLightColor,
+
                   child: Theme.of(context).brightness == Brightness.dark
                       ? Uihelper.customImage(imageurl: "profiledark.png")
                       : Uihelper.customImage(imageurl: "profileLight.png"),
@@ -87,7 +89,12 @@ class Profilescreen extends StatelessWidget {
       ),
       floatingActionButton: Uihelper.customButton(
         buttonName: "Save",
-        callBack: () {},
+        callBack: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Bottomnavigationscreen()),
+          );
+        },
         context: context,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
