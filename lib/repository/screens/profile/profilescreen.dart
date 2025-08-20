@@ -90,7 +90,7 @@ class Profilescreen extends StatelessWidget {
       floatingActionButton: Uihelper.customButton(
         buttonName: "Save",
         callBack: () {
-          Navigator.push(
+          Navigator.pushReplacement(
             context,
             MaterialPageRoute(builder: (context) => Bottomnavigationscreen()),
           );
