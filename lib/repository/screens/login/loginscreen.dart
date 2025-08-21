@@ -51,6 +51,7 @@ class Loginscreen extends StatelessWidget {
 
             SizedBox(height: 20),
             Uihelper.customTextField(
+              icondata: CupertinoIcons.phone,
               controller: phoneNumberController,
               hintText: " Phone Number",
               textInputType: TextInputType.phone,

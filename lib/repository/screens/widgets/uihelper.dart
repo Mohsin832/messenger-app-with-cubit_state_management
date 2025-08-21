@@ -75,6 +75,7 @@ class Uihelper {
     required String hintText,
     required textInputType,
     required BuildContext context,
+    required IconData icondata,
   }) {
     return Container(
       height: 36,
@@ -88,12 +89,12 @@ class Uihelper {
       child: TextField(
         // textAlign: TextAlign.start,
         controller: controller,
-
         keyboardType: textInputType,
         textAlignVertical: TextAlignVertical.center,
-
+        
         decoration: InputDecoration(
           hintText: hintText,
+          prefixIcon: Icon(icondata),
           isDense: true,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
 
@@ -114,6 +115,7 @@ class Uihelper {
             fontSize: 14,
           ),
         ),
+        
       ),
     );
   }

@@ -72,6 +72,7 @@ class Profilescreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Uihelper.customTextField(
+              icondata: Icons.person,
               controller: firstNameController,
               hintText: "First Name (Required)",
               textInputType: TextInputType.name,
@@ -79,6 +80,7 @@ class Profilescreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Uihelper.customTextField(
+              icondata: CupertinoIcons.person,
               controller: lastNameController,
               hintText: "Last Name (Optional)",
               textInputType: TextInputType.name,
