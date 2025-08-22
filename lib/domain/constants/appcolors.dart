@@ -31,4 +31,6 @@ class AppColors {
   // circle avatar color for light and dark color
   static const Color circleAvatarLightColor = Color(0xFFF7F7FC);
   static const Color circleAvatarDarkColor = Color(0xFF152033);
+  //icon color for light and dark theme
+  static const Color iconLightColor = Color(0xFFADB5BD);
 }

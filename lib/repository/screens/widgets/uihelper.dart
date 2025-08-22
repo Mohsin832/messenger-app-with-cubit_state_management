@@ -79,7 +79,7 @@ class Uihelper {
   }) {
     return Container(
       height: 36,
-      width: 300,
+      width: 327,
       decoration: BoxDecoration(
         color: Theme.of(context).brightness == Brightness.dark
             ? AppColors.containerDarkColor
@@ -91,10 +91,10 @@ class Uihelper {
         controller: controller,
         keyboardType: textInputType,
         textAlignVertical: TextAlignVertical.center,
-        
+
         decoration: InputDecoration(
           hintText: hintText,
-          prefixIcon: Icon(icondata),
+          prefixIcon: Icon(icondata, color: AppColors.iconLightColor),
           isDense: true,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
 
@@ -115,7 +115,6 @@ class Uihelper {
             fontSize: 14,
           ),
         ),
-        
       ),
     );
   }
