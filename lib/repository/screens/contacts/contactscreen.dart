@@ -10,6 +10,26 @@ class Contactscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextEditingController searchController = TextEditingController();
+    List<Map> contactDetails = [
+      {
+        "img": "av1.png",
+        "name": "Athalia Putri",
+        "last seen": "Last seen yesterday",
+      },
+      {"img": "av2.png", "name": "Erlan Sadewa", "last seen": "Online"},
+      {
+        "img": "av3.png",
+        "name": "Midala Huera",
+        "last seen": "Last seen 3 hours ago",
+      },
+      {"img": "av4.png", "name": "Nafisa Gitari", "last seen": "Online"},
+      {"img": "av5.png", "name": "Raki Devon", "last seen": "Online"},
+      {
+        "img": "av6.png",
+        "name": "Salsabila Akira",
+        "last seen": "Last seen 30 minutes ago",
+      },
+    ];
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
