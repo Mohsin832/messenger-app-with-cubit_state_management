@@ -19,12 +19,33 @@ class _BottomnavigationscreenState extends State<Bottomnavigationscreen> {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "contacts"),
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.chat_bubble_2),
+            icon: Icon(
+              CupertinoIcons.person,
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? Colors.white
+                  : Colors.black,
+            ),
+            label: "contacts",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              CupertinoIcons.chat_bubble_2,
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? Colors.white
+                  : Colors.black,
+            ),
             label: "chats",
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.more_horiz), label: "more"),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.more_horiz,
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? Colors.white
+                  : Colors.black,
+            ),
+            label: "more",
+          ),
         ],
         currentIndex: currentIndex,
         onTap: (value) {

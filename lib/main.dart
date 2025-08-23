@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
     return BlocBuilder<ThemeCubit, Themestates>(
       builder: (context, state) {
         return MaterialApp(
+          
           debugShowCheckedModeBanner: false,
           home: Onboardingscreen(),
           title: "Chat app",
