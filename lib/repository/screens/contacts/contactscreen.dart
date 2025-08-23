@@ -65,6 +65,36 @@ class Contactscreen extends StatelessWidget {
                 context: context,
                 icondata: Icons.search,
               ),
+              Expanded(
+                child: ListView.builder(
+                  // physics: NeverScrollableScrollPhysics(),
+                  itemCount: contactDetails.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 15),
+                      child: InkWell(
+                        child: ListTile(
+                          leading: Uihelper.customImage(
+                            imageurl: contactDetails[index]["img"].toString(),
+                          ),
+                          title: Uihelper.customText(
+                            text: contactDetails[index]["name"].toString(),
+                            fontsize: 14,
+                            context: context,
+                            fontweight: FontWeight.w600,
+                          ),
+                          subtitle: Uihelper.customText(
+                            text: contactDetails[index]["last seen"].toString(),
+                            fontsize: 12,
+                            context: context,
+                          ),
+                          onLongPress: () {},
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ),
