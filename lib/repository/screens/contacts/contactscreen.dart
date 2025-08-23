@@ -38,7 +38,7 @@ class Contactscreen extends StatelessWidget {
             text: "Contacts",
             fontsize: 18,
             context: context,
-            fontweight: FontWeight.w600,
+            fontweight: FontWeight.bold,
           ),
           backgroundColor: Theme.of(context).brightness == Brightness.dark
               ? AppColors.scaffoldDarkColor
@@ -88,6 +88,7 @@ class Contactscreen extends StatelessWidget {
                             fontsize: 12,
                             context: context,
                           ),
+
                           onLongPress: () {},
                         ),
                       ),
