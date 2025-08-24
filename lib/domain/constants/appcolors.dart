@@ -34,6 +34,6 @@ class AppColors {
   //icon color for light and dark theme
   static const Color iconLightColor = Color(0xFFADB5BD);
   // chat screen story container light and dark color
-  static const Color storyChatScreenLight = Color(0xFFADB5BD);
-  // static const Color storyChatScreenDark = Color(0xFF152033);
+  static const Color storyChatScreenLight = Color(0xFF375FFF);
+  static const Color storyChatScreenDark = Color(0xFF152033);
 }

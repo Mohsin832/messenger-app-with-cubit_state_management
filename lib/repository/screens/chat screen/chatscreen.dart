@@ -11,6 +11,29 @@ class Chatscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextEditingController searchController = TextEditingController();
+    List<Map> contactDetails = [
+      {
+        "img": "av1.png",
+        "name": "Athalia Putri",
+        "last seen": "Last seen yesterday",
+        "time": "10:12 pm",
+        "chats pending": "1",
+      },
+      {
+        "img": "av2.png",
+        "name": "Erlan Sadewa",
+        "last seen": "Online",
+        "time": "10:12 pm",
+        "chats pending": "1",
+      },
+      {
+        "img": "av3.png",
+        "name": "Midala Huera",
+        "last seen": "Last seen 3 hours ago",
+        "time": "12:05 pm",
+        "chats pending": "1",
+      },
+    ];
     return Scaffold(
       appBar: AppBar(
         title: Uihelper.customText(
@@ -44,7 +67,7 @@ class Chatscreen extends StatelessWidget {
             children: [
               Center(
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 15),
+                  padding: const EdgeInsets.only(left: 10),
                   child: Column(
                     children: [
                       Container(
@@ -52,14 +75,19 @@ class Chatscreen extends StatelessWidget {
                         width: 48,
                         // color: AppColors.storyChatScreenLight,
                         decoration: BoxDecoration(
-                          color: Colors.white30,
+                          color: Colors.blue,
                           border: Border.all(
                             color: AppColors.storyChatScreenLight,
                             width: 3,
                           ),
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: Icon(Icons.add, color: Colors.black),
+                        child: Icon(
+                          Icons.add,
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? AppColors.scaffoldDarkColor
+                              : AppColors.scaffoldLightColor,
+                        ),
                       ),
                       Uihelper.customText(
                         text: " Your Story",
@@ -72,13 +100,74 @@ class Chatscreen extends StatelessWidget {
               ),
             ],
           ),
-          Divider(color: Colors.blue),
+          Divider(color: Colors.white10),
+          SizedBox(height: 9),
+
           Uihelper.customTextField(
             controller: searchController,
             hintText: "Search",
             textInputType: TextInputType.name,
             context: context,
             icondata: CupertinoIcons.search,
+          ),
+          SizedBox(height: 10),
+          Expanded(
+            child: ListView.builder(
+              itemCount: contactDetails.length,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.only(left: 5),
+                  child: InkWell(
+                    child: ListTile(
+                      leading: Uihelper.customImage(
+                        imageurl: contactDetails[index]["img"].toString(),
+                      ),
+                      title: Uihelper.customText(
+                        text: contactDetails[index]["name"].toString(),
+                        fontsize: 14,
+                        context: context,
+                        fontweight: FontWeight.w600,
+                      ),
+                      subtitle: Uihelper.customText(
+                        text: contactDetails[index]["last seen"].toString(),
+                        fontsize: 12,
+                        context: context,
+                      ),
+                      trailing: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Uihelper.customText(
+                            text: contactDetails[index]["time"].toString(),
+                            fontsize: 12,
+                            context: context,
+                            fontweight: FontWeight.w400,
+                          ),
+                          SizedBox(height: 5),
+                          CircleAvatar(
+                            radius: 12,
+                            backgroundColor: Colors.blue,
+                            child: Uihelper.customText(
+                              text: contactDetails[index]["chats pending"],
+                              fontsize: 10,
+                              context: context,
+                              fontweight: FontWeight.w600,
+                              color:
+                                  Theme.of(context).brightness ==
+                                      Brightness.dark
+                                  ? Colors.white
+                                  : Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      onLongPress: () {},
+                    ),
+                  ),
+                );
+              },
+            ),
           ),
         ],
       ),

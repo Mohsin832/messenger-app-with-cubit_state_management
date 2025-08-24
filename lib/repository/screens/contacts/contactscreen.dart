@@ -67,7 +67,6 @@ class Contactscreen extends StatelessWidget {
               ),
               Expanded(
                 child: ListView.builder(
-                  // physics: NeverScrollableScrollPhysics(),
                   itemCount: contactDetails.length,
                   itemBuilder: (context, index) {
                     return Padding(
