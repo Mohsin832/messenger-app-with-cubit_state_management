@@ -79,7 +79,7 @@ class Uihelper {
   }) {
     return Container(
       height: 36,
-      width: 327,
+      width: 350,
       decoration: BoxDecoration(
         color: Theme.of(context).brightness == Brightness.dark
             ? AppColors.containerDarkColor
